@@ -417,9 +417,10 @@ button {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  color: var(--theme-accent);
+  color: var(--theme-forground) opacity(1);
   border: 0.5px solid;
   border-color: transparent;
+  filter: drop-shadow(0px 4px 14px #A49393);
 }
 
 .button, .button-link, .button-link-2xl, .button-link-xl, .button-link-lg, .button-link-md, .button-link-sm, .button-link-xs, .button-ghost, .button-ghost-2xl, .button-ghost-xl, .button-ghost-lg, .button-ghost-md, .button-ghost-sm, .button-ghost-xs, .button-outline, .button-outline-2xl, .button-outline-xl, .button-outline-lg, .button-outline-md, .button-outline-sm, .button-outline-xs, .button-solid, .button-solid-2xl, .button-solid-xl, .button-solid-lg, .button-solid-md, .button-solid-sm, .button-solid-xs {
@@ -578,8 +579,9 @@ button {
 
 .card {
   border: 1px solid;
-  border-color: var(--color-gray-300);
-  backdrop-filter: blur(80px);
+  border-color: var(--theme-container-background);
+  backdrop-filter: blur(0px);
+  background-color:rgba(255, 255, 255, 0.8);
   transition: 0.3s ease-in-out;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -588,9 +590,10 @@ button {
 }
 .card:hover, .card:focus, .card:active {
   border-color: transparent;
-  backdrop-filter: grayscale(0.5) opacity(0.8) blur(100px);
+  backdrop-filter: grayscale(0.0) opacity(0.8) blur(0px);
   background: rgba(var(--theme-card-background), 0.95);
-  box-shadow: var(--shadow-md);
+  background-color:rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-xs);
 }
 
 .logo:hover, .logo:focus, .logo:active {
@@ -598,8 +601,8 @@ button {
 }
 
 .nav-bg {
-  box-shadow: var(--shadow-sm);
-  backdrop-filter: grayscale(0.8) blur(10px);
+  box-shadow: none;
+  backdrop-filter: grayscale(0.0) blur(10px);
   z-index: 999;
 }
 
@@ -707,7 +710,7 @@ html[data-theme=dark] {
   --theme-background: #171a1c;
   --theme-forground: #e0e6eb;
   --theme-accent: #67e4bb;
-  --theme-text-gray: #49545a;
+  --theme-text-color: #49545a;
   --theme-text-selection: #aeead6;
   --theme-card-background: 70, 80, 90;
   --theme-container-background: 57, 66, 78;
@@ -731,14 +734,15 @@ html[data-theme=dark] {
 }
 
 html[data-theme=light] {
-  --theme-background: #e0e6eb;
-  --theme-forground: #171a1c;
-  --theme-accent: #6791e4;
-  --theme-text-gray: #8f9ca3;
-  --theme-text-selection: #aec2ea;
-  --theme-card-background:240, 240, 240;
-  --theme-container-background: 202, 208, 211;
-  --theme-rgb-accent: 53, 111, 227;
+  --theme-background: linear-gradient(180deg, #FFF4F7 0%, #EED6D3 100%);
+  --theme-forground: #67595E;
+  --theme-accent: #BA9093;
+  --theme-text-gray: red; /*in case I missed any occurences during renaming*/
+  --theme-text-color: #A49393;
+  --theme-text-selection: #67595E;
+  --theme-card-background: linear-gradient(180deg, #FFF4F7 0%, #EED6D3 100%);
+  --theme-container-background: #fff4f7;
+  --theme-rgb-accent: #D5E0C7;
   --color-gray-50: #f1f3f4;
   --color-gray-100: #dde1e3;
   --color-gray-200: #cad0d3;
@@ -750,15 +754,15 @@ html[data-theme=light] {
   --color-gray-800: #49545a;
   --color-gray-900: #394246;
   --shadow: 0 1px 1px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
-  --shadow-xs: 0px 0px 1px 0 rgb(60 64 67 / 30%), 0 3px 4px 0px rgb(60 64 67 / 15%);
-  --shadow-sm: 0 0px 5px 0 rgb(60 64 67 / 30%), 0 0px 5px 0px rgb(60 64 67 / 15%);
-  --shadow-md: 0 1px 5px 0 rgb(60 64 67 / 30%), 0 2px 10px 2px rgb(60 64 67 / 15%);
-  --shadow-lg: 0 1px 10px 0 rgb(60 64 67 / 30%), 0 4px 20px 10px rgb(60 64 67 / 15%);
-  --shadow-xl: 0 2px 20px 0 rgb(60 64 67 / 30%), 0 4px 50px 20px rgb(60 64 67 / 15%);
+  --shadow-xs: 0px 0px 1px 0 #A49393, 0 3px 4px 0px rgb(60 64 67 / 15%);
+  --shadow-sm: 0 0px 5px 0 #A49393, 0 0px 5px 0px rgb(60 64 67 / 15%);
+  --shadow-md: 0 1px 5px 0 #A49393, 0 2px 10px 2px rgb(60 64 67 / 15%);
+  --shadow-lg: 0 1px 10px 0 #A49393, 0 4px 20px 10px rgb(60 64 67 / 15%);
+  --shadow-xl: 0 2px 20px 0 #A49393, 0 4px 50px 20px rgb(60 64 67 / 15%);
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family:'Helvetica';
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -793,7 +797,7 @@ html, body {
 }
 
 .text {
-  color: var(--theme-text-gray);
+  color: var(--theme-text-color);
 }
 
 .wrap {
