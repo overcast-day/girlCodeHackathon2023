@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useHistory } from "react-router-dom";
+
 
 export function LoadingPage() {
+    const history = useHistory();
+
+    useEffect(() => {
+      setTimeout(() => {
+        history.push('/ItemPage');
+      }, 4000);
+    }, []);
+
     return <div className="LoadingPage">
         <div className="loading">
             <div style={{ "--c": 0 }}></div>
