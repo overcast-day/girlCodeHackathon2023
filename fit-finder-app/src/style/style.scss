@@ -11,5 +11,21 @@ html, body {
 #app_root {
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #FFF4F7 0%, #EED6D3 100%);
+    background: linear-gradient(180deg, #FFF4F7 0%, #EED6D3 100%) fixed;
+
+    font-size: 1rem;
+
+    > .logo {
+        width: 5em;
+        height: 5em;
+
+        position: absolute;
+        top: 0.5em;
+        right: 1em;
+
+        filter: invert(67%) sepia(2%) saturate(2209%) hue-rotate(314deg) brightness(91%) contrast(81%);
+    }
+
+    > div {
+    }
 }

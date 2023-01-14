@@ -8,6 +8,7 @@ import {Upload} from "./Upload";
 import {LoadingPage} from "./LoadingPage";
 import {ItemPage} from "./ItemPage";
 import {CartPage} from "./CartPage";
+import {Favorites} from "./Favorites";
 
 
 export const router = () => {
@@ -21,6 +22,7 @@ export const router = () => {
             <Route path='/LoadingPage' exact component={LoadingPage}/>
             <Route path='/ItemPage' exact component={ItemPage}/>
             <Route path='/CartPage' exact component={CartPage}/>
+            <Route path='/Favorites' exact component={Favorites}/>
             <Route component={PageNotFound}/>
         </Switch>
     )
