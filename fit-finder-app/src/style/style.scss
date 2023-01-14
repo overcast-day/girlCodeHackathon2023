@@ -1,0 +1,15 @@
+@import url("https://brycemw.ca/static/css/undo-redo.css");
+@import url("https://brycemw.ca/static/css/fira.css");
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    font-feature-settings: "abvs", "blws", "case", "calt", "dlig", "jalt", "kern", "lnum", "locl", "pnum", "rlig", "liga";
+}
+
+#app_root {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FFF4F7 0%, #EED6D3 100%);
+}
