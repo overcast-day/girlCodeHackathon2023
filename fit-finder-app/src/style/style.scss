@@ -1,0 +1,270 @@
+@import url("https://brycemw.ca/static/css/undo-redo.css");
+@import url("https://brycemw.ca/static/css/fira.css");
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    font-feature-settings: "abvs", "blws", "case", "calt", "dlig", "jalt", "kern", "lnum", "locl", "pnum", "rlig", "liga";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes loading {
+    0% {
+        background: rgb(106, 88, 94);
+    }
+    100% {
+        background: rgb(229,203,202);
+    }
+}
+
+#app_root {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FFF4F7 0%, #EED6D3 100%) fixed;
+
+    font-size: 1rem;
+    font-family: "FiraGO", sans-serif;
+
+    > .logo {
+        width: 5em;
+        height: 5em;
+        position: absolute;
+        top: 0.5em;
+        right: 1em;
+
+        filter: invert(67%) sepia(2%) saturate(2209%) hue-rotate(314deg) brightness(91%) contrast(81%);
+
+        cursor: pointer;
+        display: block;
+
+        > div {
+            display: inline-block;
+            > object {
+                width: 5em;
+                height: 5em;
+                position: relative;
+                z-index: -1
+            }
+        }
+    }
+
+    > .Homepage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        > .title {
+            color: rgba(164, 147, 147, 1);
+            font-size: 4em;
+            text-transform: uppercase;
+
+            margin: -0.25em 0;
+        }
+        > .subtitle {
+            color: rgba(103, 89, 94, 1);
+        }
+        > .button {
+            color: rgba(255, 244, 247, 1);
+            font-size: 1.5em;
+            text-align: center;
+
+            width: 15ch;
+            height: 2em;
+            line-height: 2em;
+            margin: 1em;
+
+            background: #67595E;
+            border-radius: 100vw;
+
+            box-shadow: 0 0.2em 1em #A49393;
+        }
+    }
+
+    > .LoadingPage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        color: rgba(164, 147, 147, 1);
+
+        .loading {
+            display: grid;
+            place-content: center;
+            width: 7em;
+            height: 7em;
+            margin: 1.5em;
+            > div {
+                grid-row: 1;
+                grid-column: 1;
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 100vw;
+
+                background: rgb(106, 88, 94);
+                transform: rotate(calc(45deg * var(--c))) translateY(-2.75em);
+
+                animation: 1s ease-in-out calc(2s/8 * var(--c) - 2s) infinite alternate both loading;
+            }
+        }
+    }
+
+    > .ItemPage {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        > .body {
+            width: 90%;
+
+            > .photo {
+                position: relative;
+                padding-top: 100%;
+                margin-bottom: 1em;
+
+                background-size:cover;
+                border-radius: 2em;
+
+                &::before {
+                    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z'/%3E%3C/svg%3E");
+                    position: absolute;
+                    right: 1.5em;
+                    top: 1.5em;
+
+                    display: block;
+                    width: 1.25em;
+                    height: 1.25em;
+
+                    filter: invert(36%) sepia(7%) saturate(663%) hue-rotate(287deg) brightness(91%) contrast(84%);
+                    cursor: pointer;
+                }
+            }
+
+            > .title {
+                font-size: 1.5em;
+                color: #67595E;
+            }
+
+            > .sub {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 1em;
+
+                > .creator {
+                    color: #BA9093;
+                    font-style: italic;
+                }
+                > .price {
+                    color: #67595E;
+                }
+            }
+
+            > .text {
+                color: #67595E;
+            }
+
+            > .colors {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.25em;
+
+                margin: 1em 0.25em;
+
+                > div {
+                    > input {
+                        display: none;
+                    }
+                    > label {
+                        display: block;
+                        box-sizing: content-box;
+                        width: 2em;
+                        height: 2em;
+                        margin: 0.1em;
+
+                        cursor: pointer;
+
+                        border: solid 0.1em #67595E;
+                        border-radius: 100vw;
+                    }
+                    > input:checked + label {
+                        margin: 0;
+                        border-width: 0.2em;
+                    }
+                }
+            }
+        }
+    }
+
+> .UploadPage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > .title {
+        color: #67595E;
+        font-size: 1.25em;
+        text-transform: uppercase;
+        margin: -0.25em 0;
+    }
+    > .subtitle {
+        color: #A49393;
+        font-size: 1em;
+        text-align: center;
+        width: 60%
+    }
+    > .button {
+        color: rgba(255, 244, 247, 1);
+        font-size: 1.5em;
+        text-align: center;
+
+        width: 15ch;
+        height: 2em;
+        line-height: 2em;
+        margin: 1em;
+
+        background: #67595E;
+        border-radius: 100vw;
+
+        box-shadow: 0 0.2em 1em #A49393;
+    }
+}
+
+}
+
+.button-upload {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5em;
+    text-align: center;
+
+    width: 5em;
+    height: 5em;
+    margin: 1em;
+
+
+
+    background-color: #A49393;
+    border-radius: 100vw;
+    border: none;
+
+    filter: drop-shadow(0 0.2em 1em #A49393);
+
+}
+

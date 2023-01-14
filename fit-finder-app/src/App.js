@@ -1,17 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom'
-import { Theme } from './components/Theme';
+import {BrowserRouter as Router, Link} from 'react-router-dom'
 import { router as Route} from './pages/router'
-import {solarize} from './components/asset-icons'
-import { Nav } from './components/Header/Nav';
-import { NavSub } from './components/Header/NavSub';
+import Logo from "./assets/svg/FitFinderLogoSimple.svg";
 
 const App = () => {
   
   return (
     <Router>
-      <Nav/>
-      
+      <Link to="/" className="logo"><div><object data={Logo} type="image/svg+xml"></object></div></Link>
       {/* Route is located at pages folder */}
       <Route/>
     </Router>
