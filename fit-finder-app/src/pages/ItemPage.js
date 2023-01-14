@@ -5,6 +5,8 @@ import Clothing from "../assets/img/example-clothing.webp";
 export function ItemPage() {
     return <div className="ItemPage">
         <div className="body">
+            <input type="checkbox" id="heart" className="heart"/>
+            <label htmlFor="heart"></label>
             <div className="photo" style={{backgroundImage: `url(${Clothing})`}}></div>
             <div className="title">Elevate Bustier</div>
             <div className="sub">
@@ -30,8 +32,16 @@ export function ItemPage() {
                     <label htmlFor="white" style={{backgroundColor: "#FFFFFF"}}></label>
                 </div>
             </div>
-            <div className="size"></div>
-            <div className="button"></div>
+            <div className="size">
+                <select>
+                    <option value="XS">extra small</option>
+                    <option value="S">small</option>
+                    <option value="M" selected>medium</option>
+                    <option value="L">large</option>
+                    <option value="XL">extra large</option>
+                </select>
+            </div>
+            <div className="button">Add To Cart</div>
         </div>
     </div>
 }

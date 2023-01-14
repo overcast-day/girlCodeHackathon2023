@@ -10,7 +10,6 @@ export function LoadingPage() {
         history.push('/ItemPage');
       }, 4000);
     }, []);
-
     return <div className="LoadingPage">
         <div className="loading">
             <div style={{ "--c": 0 }}></div>
