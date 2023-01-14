@@ -1,6 +1,7 @@
 import React from 'react'
 
 export function LoadingPage() {
+    setTimeout(() => window.location = "/ItemPage", 5000);
     return <div className="LoadingPage">
         <div className="loading">
             <div style={{ "--c": 0 }}></div>

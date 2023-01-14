@@ -10,10 +10,10 @@ export function Upload() {
         <p className="subtitle">
             Upload an outfit from your phone to discover your recommendations
         </p>
-        <button 
-            class="button-upload" 
-            onclick="window.location.href='/LoadingPage';">
-            <img class="logo-upload" src={Logo} alt="Upload Logo"/>
-        </button>
+        <Link
+            className="button-upload"
+            to="/LoadingPage">
+            <img className="logo-upload" src={Logo} alt="Upload Logo"/>
+        </Link>
     </div>
 }

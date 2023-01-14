@@ -316,6 +316,22 @@ a {
         }
     }
 
+    > .Favorites {
+        height: 100%;
+        > .toolbar {
+            position: absolute;
+            bottom: 1em;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 90%;
+            height: 3em;
+
+            background: #67595E;
+            border-radius: 100vw;
+            filter: drop-shadow(0 0.2em 1em #A49393);
+        }
+    }
 }
 
 .button-upload {
