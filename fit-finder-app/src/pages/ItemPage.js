@@ -30,7 +30,15 @@ export function ItemPage() {
                     <label htmlFor="white" style={{backgroundColor: "#FFFFFF"}}></label>
                 </div>
             </div>
-            <div className="size"></div>
+            <div className="size">
+                <select>
+                    <option value="XS">extra small</option>
+                    <option value="S">small</option>
+                    <option value="M" selected>medium</option>
+                    <option value="L">large</option>
+                    <option value="XL">extra large</option>
+                </select>
+            </div>
             <div className="button"></div>
         </div>
     </div>
