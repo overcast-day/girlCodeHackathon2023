@@ -258,13 +258,22 @@ a {
     height: 5em;
     margin: 1em;
 
-
-
     background-color: #A49393;
     border-radius: 100vw;
     border: none;
 
     filter: drop-shadow(0 0.2em 1em #A49393);
-
 }
+
+.logo-upload {
+    width: 3.5em;
+    height: auto;
+    padding-bottom: 0.5em;
+
+    background-color: none;
+    border: none;
+
+    filter: drop-shadow(0 0.2em 1em #A49393);
+}
+
 

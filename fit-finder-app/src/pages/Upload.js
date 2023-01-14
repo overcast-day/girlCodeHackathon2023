@@ -13,7 +13,7 @@ export function Upload() {
         <button 
             class="button-upload" 
             onclick="window.location.href='/LoadingPage';">
-            <img src={Logo} alt="Upload Logo"/>
+            <img class="logo-upload" src={Logo} alt="Upload Logo"/>
         </button>
     </div>
 }
