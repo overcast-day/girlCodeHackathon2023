@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as Router, Link} from 'react-router-dom'
 import { router as Route} from './pages/router'
 import Logo from "./assets/svg/FitFinderLogoSimple.svg";
 
@@ -7,7 +7,7 @@ const App = () => {
   
   return (
     <Router>
-      <object data={Logo} type="image/svg+xml" className="logo"></object>
+      <Link to="/" className="logo"><div><object data={Logo} type="image/svg+xml"></object></div></Link>
       {/* Route is located at pages folder */}
       <Route/>
     </Router>
