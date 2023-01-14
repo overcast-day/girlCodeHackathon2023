@@ -13,6 +13,15 @@ a {
     color: inherit;
 }
 
+@keyframes loading {
+    0% {
+        background: rgb(106, 88, 94);
+    }
+    100% {
+        background: rgb(229,203,202);
+    }
+}
+
 #app_root {
     width: 100%;
     height: 100%;
@@ -75,6 +84,36 @@ a {
             border-radius: 100vw;
 
             box-shadow: 0 0.2em 1em #A49393;
+        }
+    }
+
+    > .LoadingPage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        color: rgba(164, 147, 147, 1);
+
+        .loading {
+            display: grid;
+            place-content: center;
+            width: 7em;
+            height: 7em;
+            margin: 1.5em;
+            > div {
+                grid-row: 1;
+                grid-column: 1;
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 100vw;
+
+                background: rgb(106, 88, 94);
+                transform: rotate(calc(45deg * var(--c))) translateY(-2.75em);
+
+                animation: 1s ease-in-out calc(2s/8 * var(--c) - 2s) infinite alternate both loading;
+            }
         }
     }
 }
