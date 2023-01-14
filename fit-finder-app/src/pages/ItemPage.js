@@ -12,7 +12,24 @@ export function ItemPage() {
                 <div className="price">$110.00</div>
             </div>
             <div className="text">This is a cropped, bustier-style top with boning for shaping and a front peak hem. It's made from a high-shine, stretchy satin fabric.</div>
-            <div className="colors"></div>
+            <div className="colors">
+                <div>
+                    <input type="radio" name="color" id="black"></input>
+                    <label htmlFor="black" style={{backgroundColor: "#0A0A18"}}></label>
+                </div>
+                <div>
+                    <input type="radio" name="color" id="brown"></input>
+                    <label htmlFor="brown" style={{backgroundColor: "#AA8164"}}></label>
+                </div>
+                <div>
+                    <input type="radio" name="color" id="green"></input>
+                    <label htmlFor="green" style={{backgroundColor: "#D5E0C7"}}></label>
+                </div>
+                <div>
+                    <input type="radio" name="color" id="white"></input>
+                    <label htmlFor="white" style={{backgroundColor: "#FFFFFF"}}></label>
+                </div>
+            </div>
             <div className="size"></div>
             <div className="button"></div>
         </div>

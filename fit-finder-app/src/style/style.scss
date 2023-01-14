@@ -180,12 +180,62 @@ a {
                     height: 1.25em;
 
                     filter: invert(36%) sepia(7%) saturate(663%) hue-rotate(287deg) brightness(91%) contrast(84%);
+                    cursor: pointer;
                 }
             }
 
             > .title {
                 font-size: 1.5em;
                 color: #67595E;
+            }
+
+            > .sub {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 1em;
+
+                > .creator {
+                    color: #BA9093;
+                    font-style: italic;
+                }
+                > .price {
+                    color: #67595E;
+                }
+            }
+
+            > .text {
+                color: #67595E;
+            }
+
+            > .colors {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.25em;
+
+                margin: 1em 0.25em;
+
+                > div {
+                    > input {
+                        display: none;
+                    }
+                    > label {
+                        display: block;
+                        box-sizing: content-box;
+                        width: 2em;
+                        height: 2em;
+                        margin: 0.1em;
+
+                        cursor: pointer;
+
+                        border: solid 0.1em #67595E;
+                        border-radius: 100vw;
+                    }
+                    > input:checked + label {
+                        margin: 0;
+                        border-width: 0.2em;
+                    }
+                }
             }
         }
     }
